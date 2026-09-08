@@ -21,8 +21,7 @@ import {
   Loader2
 } from "lucide-react";
 import { SubscriberState, SubscriberCard, SubscriberTopicContent, SocialLinks } from "../types";
-import { formatImageUrl } from "../utils/imageUtils";
-import { checkSubscriberAccountStatus, fetchSubscriberTopicContent } from "../utils/googleBackendBridge";
+import { formatImageUrl, checkSubscriberAccountStatus, fetchSubscriberTopicContent } from "../utils/googleBackendBridge";
 import { useLanguage } from "../context/LanguageContext";
 
 interface SubscriberFullPageProps {

@@ -4,7 +4,7 @@
  */
 
 import { AppData, SheetRow, SubscriberTopicContent, SubscriberCard } from "../types";
-import { formatImageUrl, isVideoUrl, isActualMediaUrl } from "./imageUtils";
+import { formatImageUrl, isVideoUrl, isActualMediaUrl } from "./googleBackendBridge";
 
 const SPREADSHEET_ID = import.meta.env.VITE_SPREADSHEET_ID || "1MAurScyKTntcUUWAoB7Qt62vwvmEnDqmYNaB0DKo9tY";
 

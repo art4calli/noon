@@ -31,11 +31,11 @@ import {
 import { RegistrationQuestion, QuestionTranslation } from "../types";
 import { DEFAULT_FORM_TRANSLATIONS } from "../data/defaultFormTranslations";
 import { getSavedFormQuestions, DEFAULT_CONFIGURED_QUESTIONS } from "../data/configuredFormQuestions";
-import { formatImageUrl } from "../utils/imageUtils";
 import {
   submitRegistrationBridge,
   uploadFileToDriveBridge,
   fetchFormQuestionsBridge,
+  formatImageUrl,
   DEFAULT_SCRIPT_URL,
   DEFAULT_DRIVE_FOLDER_ID
 } from "../utils/googleBackendBridge";
