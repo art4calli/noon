@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import {
   LogOut,
@@ -21,7 +21,8 @@ import {
   Loader2
 } from "lucide-react";
 import { SubscriberState, SubscriberCard, SubscriberTopicContent, SocialLinks } from "../types";
-import { formatImageUrl, checkSubscriberAccountStatus, fetchSubscriberTopicContent } from "../utils/googleBackendBridge";
+import { formatImageUrl } from "../utils/imageUtils";
+import { checkSubscriberAccountStatus, fetchSubscriberTopicContent } from "../utils/googleBackendBridge";
 import { useLanguage } from "../context/LanguageContext";
 
 interface SubscriberFullPageProps {

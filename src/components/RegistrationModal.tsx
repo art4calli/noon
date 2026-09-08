@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import {
   X,
@@ -31,11 +31,11 @@ import {
 import { RegistrationQuestion, QuestionTranslation } from "../types";
 import { DEFAULT_FORM_TRANSLATIONS } from "../data/defaultFormTranslations";
 import { getSavedFormQuestions, DEFAULT_CONFIGURED_QUESTIONS } from "../data/configuredFormQuestions";
+import { formatImageUrl } from "../utils/imageUtils";
 import {
   submitRegistrationBridge,
   uploadFileToDriveBridge,
   fetchFormQuestionsBridge,
-  formatImageUrl,
   DEFAULT_SCRIPT_URL,
   DEFAULT_DRIVE_FOLDER_ID
 } from "../utils/googleBackendBridge";
@@ -517,7 +517,7 @@ export default function RegistrationModal({
           return resolve(dataUrl);
         }
 
-        if (source instanceof Blob) {
+        if (source instanceof File) {
           const reader = new FileReader();
           reader.onload = (e) => {
             const img = new Image();

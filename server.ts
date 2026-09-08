@@ -756,7 +756,7 @@ app.get("/api/data", async (req, res) => {
     }
 
     let socialLinks = { ...FALLBACK_DATA.socialLinks };
-    let contactInfo: any = { ...FALLBACK_DATA.contactInfo };
+    let contactInfo = { ...FALLBACK_DATA.contactInfo };
     const contactCards: any[] = [];
 
     // Check if contactRows contains the new structured keywords in Column A of any row
@@ -1174,7 +1174,7 @@ app.get("/api/data", async (req, res) => {
         loginButtonText, 
         loginButtonUrl,
         headerBgUrl: headerBgUrl || undefined,
-        features: features.length > 0 ? features : ((FALLBACK_DATA.profile as any).features || [])
+        features: features.length > 0 ? features : FALLBACK_DATA.profile.features
       },
       socialLinks,
       homeCards: homeCards.length > 0 ? homeCards : FALLBACK_DATA.homeCards,
